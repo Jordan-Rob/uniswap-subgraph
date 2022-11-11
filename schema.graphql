@@ -1,6 +1,29 @@
-type ExampleEntity @entity {
+type Factory @entity {
+  # factory address
   id: ID!
-  count: BigInt!
-  fee: Int! # uint24
-  tickSpacing: Int! # int24
+  # amount of pools created
+  poolCount: BigInt!
+  # amoutn of transactions all time
+  txCount: BigInt!
+  # current owner of the factory
+  owner: ID!
 }
+
+type Pool @entity {
+  # pool address
+  id: ID!
+  # creation
+  createdAtTimestamp: BigInt!
+  # block pool was created at
+  createdAtBlockNumber: BigInt!
+  # token0
+  token0: Token!
+  # token1
+  token1: Token!
+  # fee amount
+  feeTier: BigInt!
+  # all time number of transactions
+  txCount: BigInt!
+  # derived fields
+}
+
