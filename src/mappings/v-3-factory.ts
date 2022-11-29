@@ -4,8 +4,8 @@ import {
   FeeAmountEnabled,
   OwnerChanged,
   PoolCreated
-} from "../generated/V3Factory/V3Factory"
-import { ExampleEntity } from "../generated/schema"
+} from "../../generated/V3Factory/V3Factory"
+import { ExampleEntity } from "../../generated/schema"
 
 export function handleFeeAmountEnabled(event: FeeAmountEnabled): void {
   // Entities can be loaded from the store using a string ID; this ID
